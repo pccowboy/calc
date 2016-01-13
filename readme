@@ -1,0 +1,20 @@
+Hello,
+
+So, as far as this goes, it is not much.  Not even executable.  No where near what I'd 
+be writing if I was a fulltime software engineer.
+
+With that out of the way, I would think the "ops" way to do this is to use existing tools
+that get the job done.  So instead of diving into coding right away, I did some reading 
+on Ruby-ish lex and yacc.  The gems for these tools come with an example that works,
+which I have included here.  I installed ruby 2.2.4, rvm, and a couple gems to use it.
+
+It can be executed using 'ruby calc', fwiw.
+
+The rest of the bits I was writing were geared towards the idea that a user of the
+library should have to do as little as possible to add a new operator.  In particular,
+I thought that maybe creating precedence rules that could be gathered dynamically would
+be useful, makes knowing internals of other operators less of a requirement.  Not sure that
+trying to represent precedence in a "detached" fashion for a grammar is really a good way
+to go, but it is an interesting thought.
+
+
