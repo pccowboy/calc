@@ -18,3 +18,7 @@ trying to represent precedence in a "detached" fashion for a grammar is really a
 to go, but it is an interesting thought.
 
 
+## Provide access to a manual snapshot copied from production
+This task will copy a recent automated snapshot from production, and give the staging account access to it.
+1. Run this command to get a list of the two most recent production snapshots
+    aws-vault exec ValiMail-App-Prod -- aws redshift describe-cluster-snapshots --start-time `date -v-1d +%Y-%m-%d` --max-items 2 --query 'Snapshots[*].{ID:SnapshotIdentifier,Status:Status}'
